@@ -3,8 +3,7 @@
 > **The fastest BLAKE3 hashing library for Node.js.**  
 > Powered by Rust, SIMD (AVX-512/NEON), and N-API.
 
-[![npm version](https://img.shields.io/npm/v/@rasmx/node/blake3.svg)](https://www.npmjs.com/package/@rasmx/node/blake3)
-[![License](https://img.shields.io/npm/l/@rasmx/node/blake3.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/@rasmx/node/blake3.svg)](https://www.npmjs.com/package/@rasmx/blake3-node)
 
 ## Features
 

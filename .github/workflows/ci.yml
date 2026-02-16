@@ -33,9 +33,7 @@ jobs:
           node-version: 20
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
+        run: npm install -g pnpm
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -55,7 +53,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: bindings-${{ matrix.os }}-${{ strategy.job-index }}
+          name: bindings-${{ matrix.os }}
           path: package/*.node
           if-no-files-found: error
 
@@ -72,6 +70,9 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Download artifacts
         uses: actions/download-artifact@v4
