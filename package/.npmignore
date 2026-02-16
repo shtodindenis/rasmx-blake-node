@@ -1,0 +1,17 @@
+# Source files
+*.rs
+Cargo.toml
+build.rs
+
+# Dev files
+node_modules/
+test_usage.js
+*.md
+.gitignore
+
+# Build artifacts (except .node files)
+target/
+
+# IDE
+.vscode/
+.idea/
