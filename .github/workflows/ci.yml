@@ -56,7 +56,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bindings-${{ matrix.os }}
-          path: package/*.node
+          path: |
+            package/*.node
+            package/index.cjs
+            package/index.d.ts
           if-no-files-found: error
 
   publish:
@@ -85,11 +88,8 @@ jobs:
           merge-multiple: true
           path: package
 
-      - name: Prepare package for publish
-        run: |
-          cd package
-          cp index.js index.cjs
-          touch index.d.ts
+      - name: List files (Optional - for debugging)
+        run: ls -R package
 
       - name: Publish to npm
         run: |
