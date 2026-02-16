@@ -11,6 +11,7 @@ node_modules/
 package/*.node
 package/index.cjs
 package/index.d.ts
+package/npm/
 
 # IDE
 .vscode/

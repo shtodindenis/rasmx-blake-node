@@ -1,73 +1,71 @@
 {
-    "name": "@rasmx/blake3",
-    "version": "1.0.0",
-    "type": "module",
-    "main": "./index.js",
-    "types": "./index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./index.js",
-            "require": "./index.cjs"
-        }
-    },
-    "files": [
-        "index.js",
-        "index.cjs",
-        "index.d.ts",
-        "*.node"
-    ],
-    "os": [
-        "win32",
-        "linux",
-        "darwin"
-    ],
-    "cpu": [
-        "x64",
-        "arm64"
-    ],
-    "keywords": [
-        "blake3",
-        "hash",
-        "cryptography",
-        "simd",
-        "neon",
-        "rust",
-        "napi",
-        "fast",
-        "secure",
-        "native"
-    ],
-    "author": "deniis",
-    "license": "MIT",
-    "description": "High-performance BLAKE3 hashing bindings for Node.js using Rust and SIMD optimizations.",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rasmx/blake3.git"
-    },
-    "bugs": {
-        "email": "bugs@rasmx.dev",
-        "url": "https://github.com/rasmx/blake3/issues"
-    },
-    "homepage": "https://github.com/rasmx/blake3#readme",
-    "napi": {
-        "binaryName": "index",
-        "targets": [
-            "x86_64-unknown-linux-gnu",
-            "x86_64-pc-windows-msvc",
-            "x86_64-apple-darwin",
-            "aarch64-apple-darwin"
-        ]
-    },
-    "scripts": {
-        "build": "napi build --platform --release --cargo-cwd ../crate --js index.cjs --dts index.d.ts .",
-        "build:debug": "napi build --platform --cargo-cwd ../crate --js index.cjs --dts index.d.ts .",
-        "test": "node test_usage.js",
-        "prepublishOnly": "napi prepublish -t npm"
-    },
-    "devDependencies": {
-        "@napi-rs/cli": "^2.18.4"
-    },
-    "engines": {
-        "node": ">= 16"
+  "name": "@rasmx/blake3-node",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
     }
+  },
+  "files": [
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "*.node"
+  ],
+  "os": [
+    "win32",
+    "linux",
+    "darwin"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "keywords": [
+    "blake3",
+    "hash",
+    "cryptography",
+    "simd",
+    "neon",
+    "rust",
+    "napi",
+    "fast",
+    "secure",
+    "native"
+  ],
+  "author": "deniis",
+  "license": "MIT",
+  "description": "High-performance BLAKE3 hashing bindings for Node.js using Rust and SIMD optimizations.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shtodindenis/rasmx-blake-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shtodindenis/rasmx-blake-node/issues"
+  },
+  "homepage": "https://github.com/shtodindenis/rasmx-blake-node#readme",
+  "napi": {
+    "binaryName": "index",
+    "targets": [
+      "x86_64-unknown-linux-gnu",
+      "x86_64-pc-windows-msvc",
+      "x86_64-apple-darwin",
+      "aarch64-apple-darwin"
+    ]
+  },
+  "scripts": {
+    "build": "napi build --platform --release --cargo-cwd ../crate --js index.cjs --dts index.d.ts .",
+    "build:debug": "napi build --platform --cargo-cwd ../crate --js index.cjs --dts index.d.ts .",
+    "test": "node test_usage.js"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.4"
+  },
+  "engines": {
+    "node": ">= 16"
+  }
 }
