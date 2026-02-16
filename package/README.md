@@ -1,9 +1,9 @@
-# @rasmx/node/blake3
+# @rasmx/blake3-node
 
-> **The fastest BLAKE3 hashing library for Node.js.**  
+> **The fastest BLAKE3 hashing library for Node.js.**
 > Powered by Rust, SIMD (AVX-512/NEON), and N-API.
 
-[![npm version](https://img.shields.io/npm/v/@rasmx/node/blake3.svg)](https://www.npmjs.com/package/@rasmx/blake3-node)
+[![npm version](https://img.shields.io/npm/v/@rasmx/blake3-node.svg)](https://www.npmjs.com/package/@rasmx/blake3-node)
 
 ## Features
 
@@ -16,9 +16,9 @@
 ## Installation
 
 ```bash
-pnpm add @rasmx/node/blake3
+pnpm add @rasmx/blake3-node
 # or
-npm install @rasmx/node/blake3
+npm install @rasmx/blake3-node
 ```
 
 ## Usage
@@ -28,10 +28,10 @@ npm install @rasmx/node/blake3
 Best for small inputs or CLI tools.
 
 ```javascript
-import { hash } from '@rasmx/node/blake3';
+import { hash } from '@rasmx/blake3-node';
 
 const buffer = Buffer.from("Hello World");
-const digest = hash(buffer); 
+const digest = hash(buffer);
 console.log(digest); // Hex string
 ```
 
@@ -40,7 +40,7 @@ console.log(digest); // Hex string
 Best for servers (Express, Fastify) to avoid blocking the Event Loop.
 
 ```javascript
-import { hashAsync } from '@rasmx/node/blake3';
+import { hashAsync } from '@rasmx/blake3-node';
 import fs from 'fs/promises';
 
 async function processFile() {
@@ -55,7 +55,7 @@ async function processFile() {
 For memory-efficient processing of streams.
 
 ```javascript
-import { Blake3Hasher } from '@rasmx/node/blake3';
+import { Blake3Hasher } from '@rasmx/blake3-node';
 
 const hasher = new Blake3Hasher();
 
