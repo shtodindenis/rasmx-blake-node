@@ -85,6 +85,12 @@ jobs:
           merge-multiple: true
           path: package
 
+      - name: Prepare package for publish
+        run: |
+          cd package
+          cp index.js index.cjs
+          touch index.d.ts
+
       - name: Publish to npm
         run: |
           cd package
